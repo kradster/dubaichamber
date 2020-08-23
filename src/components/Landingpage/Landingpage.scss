@@ -1,0 +1,295 @@
+$primary-color:#003e5f;
+$inactive-color:#cbd8e0;
+$inactive-color2:#e6ebef;
+$accent-color:#f8701a;
+$heading-color:#ba3f07;
+$footer-color:#edf1f4;
+$time-box:#001941;
+
+.landingpage-timer{
+    background-image: url('../../Assets/lbg.jpg');
+    background-size: cover;
+    width:98.9vw;
+    height:100vh;
+    display: flex;
+    box-sizing: border-box;
+
+    .timer{
+        position: relative;
+        margin: auto;
+
+        p{
+            color: $accent-color;
+            font-size:2rem;
+            padding:0;
+            margin: 0;
+        }
+
+        h1{
+            margin:1rem 0;
+            font-size:5rem;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+
+        ul.timebar{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content:space-evenly;
+            li{
+                margin:5px;
+                text-align: center;
+                font-size:4rem;
+                background-color:$time-box;
+                color: whitesmoke;
+                width:100px;
+                height:100px;
+                display: flex;
+                flex-direction: column;
+                padding:1rem;
+                position: relative;
+                span{
+                    margin-top: auto;
+                    display: block;
+                    font-size:1rem;
+                }
+                &::before{
+                   content: "";
+                   position: absolute;
+                   background-color: $primary-color;
+                   width:100%;
+                   height:2px;
+                   left:0px;
+                   top:60px; 
+                }
+            }
+        }
+    }
+    .social {
+        display: flex;
+        align-items: center;
+        ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    }
+}
+
+.landingpage-navbar{
+    display: flex;
+    padding:10px;
+    padding-right:0;
+    position: absolute;
+    box-sizing: border-box;
+    width: calc(100vw - 20px);
+    .logo{
+        img{
+            width:150px;
+        }
+    }
+    ul{
+        display: flex;
+        padding:0;
+        margin: 0;
+        list-style: none;
+        margin-left: auto;
+        margin-right:10px;
+        li{
+            padding:1rem;
+            a{
+                color: white;
+                text-decoration: none;
+            }
+            &:last-child a{
+                background-color: $accent-color
+                ;
+                padding: 10px 1rem ;
+                border-radius:20px;
+                color:black            
+            }
+        }
+    }
+}
+
+.landingpage-about,
+.landingpage-speaker,
+.landingpage-agenda{
+    padding:50px 150px;
+    h3{
+        text-align: left;
+        font-size:2rem;
+        color: darkred;
+    }
+    p{
+        padding-bottom:1rem 0;
+        text-align: left;
+        font-size:1.2rem;
+        color: #121212;
+    }
+}
+
+
+.landingpage-speaker{
+    background-color: $primary-color;
+    h3{
+        color: white;
+    }
+    ul.speakers{
+        display: flex;
+        padding: 0;
+        margin: 0;
+        margin-top:50px;
+        list-style: none;
+        justify-content: space-around;
+        li{
+            position: relative;
+            margin:5px;
+            overflow: hidden;
+            border-radius:5px;
+            img{
+                width:250px;
+                height:350px;
+            }
+            .overlay-text{
+                width:calc(100% - 2rem);
+                height:calc(100% - 2rem);
+                display: flex;
+                position: absolute;
+                bottom:0;
+                padding:1rem;
+                left:0px;
+                color: white;
+                background-image: linear-gradient(rgba(19, 18, 18, 0.1) 50%,rgb(0, 0, 0));
+
+                span{
+                    margin-top: auto;
+                    margin-bottom:20px;
+
+                    &::before{
+                        content: "";
+                        display: block;
+                        width:10px;
+                        height:20px;
+                        margin-bottom:5px;
+                        background-color: $accent-color
+                        ;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.landingpage-agenda {
+    .agenda-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding:0;
+        margin:0;
+        list-style: none;
+
+        li{
+            height:200px ;
+            border:1px solid #fff;
+            padding:2rem;
+            color: whitesmoke;
+            position: relative;
+            &.active{
+                background-color: $primary-color;
+            }
+            &.blankw{
+                color: #ffffff;
+            }
+            &.blankw2{
+                background-color: $inactive-color;
+            }
+            &.blankw3{
+                background-color: $inactive-color2;
+            }
+
+            span{
+                display: block;
+            }
+            .time{
+                color: $accent-color;
+                font-size: 1.2rem;
+            }
+            .title{
+                margin-top:20px;
+                font-weight: bold;
+            }
+            .text{
+                margin-top:10px;
+                font-size:0.8rem;
+                line-height:20px;
+            }
+
+            &.live::after{
+                content: "LIVE";
+                display: block;
+                color: $accent-color
+                ;
+                font-weight: bold;
+                font-size:0.8rem;
+                margin-top:40px;
+            }
+        }
+
+    }
+
+}
+
+
+footer{
+    background-color: $footer-color;
+    display: flex;
+    padding:1rem 4rem;
+    padding-right:0;
+    // position: absolute;
+    box-sizing: border-box;
+    // width: calc(100vw - 10px);
+    align-items: center;
+    justify-content: center;
+    .logo{
+        img{
+            width:150px;
+        }
+    }
+    .linkbar{
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        ul{
+            display: flex;
+            padding:0;
+            margin: 0;
+            list-style: none;
+            li{
+                padding: 0 1rem;
+                a{
+                    color:black;
+                    text-decoration: none;
+                    font-size: 0.9rem;
+                }
+                &:last-child a{
+                    padding: 0px 1rem ;
+                    color: $accent-color;
+                    border-left: 1px solid #000;
+                    font-weight: bold;
+                }
+            }
+        }
+        span{
+            font-size: 0.8rem;
+            margin-top:20px;
+        }
+
+    }
+}
+

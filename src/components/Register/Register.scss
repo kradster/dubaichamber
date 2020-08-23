@@ -1,0 +1,161 @@
+$primary-color:#003e5f;
+$inactive-color:#cbd8e0;
+$inactive-color2:#e6ebef;
+$accent-color:#f8701a;
+$heading-color:#ba3f07;
+$footer-color:#edf1f4;
+$time-box:#001941;
+
+.Register{
+    background-image: url('../../Assets/bg.jpg');
+    background-size: cover;
+    width:100vw;
+    height:100vh;
+
+    .landingpage-timer{
+    display: flex;
+    box-sizing: border-box;
+    
+    .timer{
+        position: relative;
+        margin: auto;
+        
+        p{
+            color: $accent-color;
+            font-size:2rem;
+            padding:0;
+            margin: 0;
+        }
+        
+        h1{
+            margin:1rem 0;
+            font-size:5rem;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        
+        ul.timebar{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content:space-evenly;
+            li{
+                margin:5px;
+                text-align: center;
+                font-size:4rem;
+                background-color:$time-box;
+                color: whitesmoke;
+                width:100px;
+                height:100px;
+                display: flex;
+                flex-direction: column;
+                padding:1rem;
+                position: relative;
+                span{
+                    margin-top: auto;
+                    display: block;
+                    font-size:1rem;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    background-color: $primary-color;
+                    width:100%;
+                    height:2px;
+                    left:0px;
+                    top:60px; 
+                }
+            }
+        }
+    }
+    .social {
+        display: flex;
+        align-items: center;
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+    }
+}
+
+.landingpage-navbar{
+    display: flex;
+    padding:10px;
+    padding-right:0;
+    position: absolute;
+    box-sizing: border-box;
+    width: calc(100vw - 20px);
+    align-items: center;
+    .logo{
+        img{
+            width:150px;
+        }
+    }
+    .close{
+        color: #121212;
+        font-size: 3rem;
+        margin-left: auto;
+        margin-right:20px;
+        text-decoration: none;
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+.register-form{
+    width:50vw;
+    height:100vh;
+    display: flex;
+
+    form{
+        margin: auto;
+        margin-top:76px;
+
+        h1{
+            font-weight:normal;
+        }
+
+        .input-field{
+            width:300px;
+            display: flex;
+            flex-direction: column;
+            padding:10px 0px;
+            label{
+                color: $accent-color;
+                margin-bottom:5px;
+                font-size:0.8rem;
+            }
+            input{
+                border: none;
+                outline: none;
+                border-bottom: 1px solid $inactive-color;
+            }
+            select{
+                border: none;
+                outline: none;
+                border-bottom: 1px solid $inactive-color;
+                background-color: white;
+                padding:10px 0 10px 5px;
+            }
+            button{
+                margin: auto;
+                margin-top:20px;
+                background-color: $accent-color;
+                color: #121;
+                border: none;
+                outline: none;
+                font-size:1.2rem;
+                padding:0.5rem 2rem;
+                border-radius:30px;                
+            }
+        }
+    }
+}
+
+
+}
