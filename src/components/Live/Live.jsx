@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 const Live = () => {
     const [ShowPolls, setShowPolls] = useState(false);
-    const [ShowAsk, setShowAsk] = useState(true)
+    const [ShowAsk, setShowAsk] = useState(false);
     return (
         <div className="Live">
             <div className="navbar">
@@ -20,7 +20,7 @@ const Live = () => {
             <main>
                 <section className="speakers">
                     <div className="speaker-area">
-dfgndngd
+                    <video src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" loop autoPlay muted />
                     </div>
                     <div className="actionsbar">
                         <div className="action">
